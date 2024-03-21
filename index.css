@@ -1,4 +1,80 @@
 .heading{
     color: white;
     text-align: center;
+    position: relative;
+    top: 10%;
+    font-size: 30px;
+    font-weight: 700;
+    left: 25%;
+}
+
+.hero-heading{
+    color: black;
+    position: absolute;
+    align-items: start;
+    margin-top: 20%;
+    font-weight: 700;
+    font-size: 50px;
+    padding-left: 5%;
+}
+
+.hero-para{
+    color: black;
+    position: absolute; 
+    align-items: start;
+    margin-top: 25%;
+    font-weight: 400;
+    font-size: 20px;
+    padding-left: 5%;
+}
+
+.login-form{
+    text-align: center;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    background-color: black;
+    max-width: 100%;
+    padding: 233px 300px 235px 300px;
+    border-radius: 20px 0 0 20px;
+}
+.login input[type="text"],
+.login input[type="password"],
+.login button {
+    width: 150%;
+    padding: 10px;
+    margin-bottom: 20px;
+    /* border: 1px solid white; */
+    border-radius: 5px;
+    position: relative;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.login input[type="text"]::placeholder,
+.login input[type="password"]::placeholder {
+    color: whitesmoke; /* Set placeholder text color to white */
+}
+
+.login button {
+    background-color: #007bff;
+    width: 160%;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.login button:hover {
+    background-color: #0056b3;
+    width: 160%;
+}
+
+/* Message styles */
+.message {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    position: relative;
+    left: 25%;
 }
