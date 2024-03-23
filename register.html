@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<html lang="en">
+<link rel="stylesheet" href="register.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online CrowdFunding</title>
+</head>
+<style>
+    body{
+        font-family: "Open Sans Condensed", sans-serif;
+    }
+</style>   
+<body bgcolor="whitesmoke">
+    <div class="container">
+        <!-- Hero Text -->
+    <div class="hero-text">
+        <h1 class="hero-heading">Online CrowdFunding</h1>
+        <p class="hero-para">Helping you to raise funds for your projects</p>
+    </div>
+
+    <!-- Login Form -->
+    <div class="login-form">
+        <form class="login" method="post" action="process_form.php">
+            <h2 class="heading">Login</h2>
+            <input type="text" name="name" placeholder="Username" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <button type="submit" href="home_page.html">Register</button><br>
+        </form>
+    </div>
+    </div>
+</body>
+</html>
