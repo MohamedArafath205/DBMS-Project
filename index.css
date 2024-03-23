@@ -35,7 +35,9 @@
     right: 0%;
     background-color: black;
     max-width: 100%;
-    padding: 233px 300px 235px 300px;
+    max-height: 100%;
+    padding: 15.1% 18%;
+    /* padding: 233px 300px 235px 300px; */
     border-radius: 20px 0 0 20px;
 }
 .login input[type="text"],
@@ -78,3 +80,4 @@
     position: relative;
     left: 25%;
 }
+

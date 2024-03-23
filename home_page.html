@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<link rel="stylesheet" href="home_page.css">
+<html lang="en">
+<style>
+    body{
+        font-family: "Open Sans Condensed", sans-serif;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online CrowdFunding | Home Page</title>
+</head>
+<body>
+    <h1 class="hero">Projects</h1>
+    <div class="card_container">
+    <div id="card">
+        <img src="https://images.unsplash.com/photo-1484186304838-0bf1a8cff81c?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <i class="ri-heart-fill"></i>
+        <h1>Seth Doyle</h1>
+        <p>Birmingham, Alabama</p>
+        <h5>Not your Friend</h5>
+        <button id="addfrn" onclick="redirectToProjects()">Add Friend</button>
+      </div>
+    <div id="card">
+        <img src="https://images.unsplash.com/photo-1484186304838-0bf1a8cff81c?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <i class="ri-heart-fill" onclick="redirectToProjects()"></i>
+        <h1>Seth Doyle</h1>
+        <p>Birmingham, Alabama</p>
+        <h5>Not your Friend</h5>
+        <button id="addfrn" >Add Friend</button>
+      </div>
+    <div id="card">
+        <img src="https://images.unsplash.com/photo-1484186304838-0bf1a8cff81c?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <i class="ri-heart-fill"></i>
+        <h1>Seth Doyle</h1>
+        <p>Birmingham, Alabama</p>
+        <h5>Not your Friend</h5>
+        <button id="addfrn" onclick="redirectToProjects()">Add Friend</button>
+      </div>
+    </div>
+    <script>
+        function redirectToProjects() {
+            window.location.href = 'project_detail.html';
+        }
+    </script>
+</body>
+</html>

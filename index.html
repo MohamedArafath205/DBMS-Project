@@ -11,9 +11,10 @@
     body{
         font-family: "Open Sans Condensed", sans-serif;
     }
-</style>
-<body bgcolor="white">
-    <!-- Hero Text -->
+</style>   
+<body bgcolor="whitesmoke">
+    <div class="container">
+        <!-- Hero Text -->
     <div class="hero-text">
         <h1 class="hero-heading">Online CrowdFunding</h1>
         <p class="hero-para">Helping you to raise funds for your projects</p>
@@ -25,9 +26,34 @@
             <h2 class="heading">Login</h2>
             <input type="text" name="username" placeholder="Username" required><br>
             <input type="password" name="password" placeholder="Password" required><br>
-            <button type="submit">Login</button><br>
+            <button type="submit" href="home_page.html">Login</button><br>
             <a class="message" href="register.php">Don't have an account? Register</a>
         </form>
     </div>
+    </div>
+    <script>
+        document.querySelector('.login').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'home_page.html';
+        });
+    </script>
+    <!-- <table id="page">
+        <tr>
+            <div class="hero-text">
+                <h1 class="hero-heading">Online CrowdFunding</h1>
+                <p class="hero-para">Helping you to raise funds for your projects</p>
+            </div>
+        </tr>
+        <tr>
+            <div class="login-form">
+                <form class="login" method="POST" action="#">
+                    <h2 class="heading">Login</h2>
+                    <input type="text" name="username" placeholder="Username" required><br>
+                    <input type="password" name="password" placeholder="Password" required><br>
+                    <button type="submit">Login</button><br>
+                    <a class="message" href="register.php">Don't have an account? Register</a>
+                </form>
+            </div>
+      </table> -->
 </body>
 </html>
