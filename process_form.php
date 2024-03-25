@@ -7,7 +7,7 @@
     if($conn->connect_error){
         die('Connection Failed : '.$conn->connect_error);
     }else{
-        $stmt = $conn->prepare("insert into user(name, email, password) values(?, ?, ?)");
+        $stmt = $conn->prepare("insert into user(name, email, pass) values(?, ?, ?)");
         $stmt->bind_param("sss", $name, $email, $password);
         $stmt->execute();
         header("Location: home_page.html");

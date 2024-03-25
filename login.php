@@ -1,47 +1,44 @@
 <?php
-// Check if form data exists
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email']) && isset($_POST['password'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+$sname = "localhost";
+$uname = "root";
+$password = "";
+$db_name = "onlinecrowdfunding";
 
-    // Database configuration
-    $servername = "localhost"; // Replace with your database server name
-    $username = "root"; // Replace with your database username
-    $password_db = ""; // Replace with your database password
-    $dbname = "onlinecrowdfunding"; // Replace with your database name
+$conn = mysqli_connect($sname, $uname, $password, $db_name);
 
-    // Create a database connection
-    $conn = new mysqli($servername, $username, $password_db, $dbname);
-
-    // Check the connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+if (isset($_POST['emailid']) && isset($_POST['password'])){
+    function validate($data){
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
     }
 
-    // Prepare and execute a SELECT query to check credentials
-    $stmt = $conn->prepare("SELECT email, password FROM user WHERE email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    $emailid = validate($_POST['emailid']);
+    $password = validate($_POST['password']);
 
-    if ($result->num_rows == 1) {
-        // User found, verify password
-        $row = $result->fetch_assoc();
-        if (password_verify($password, $row['password'])) {
-            // Password is correct, redirect to home page
-            header("Location: home_page.html");
+    if (empty($emailid)){
+        header("Location: login.php?error=Email is required");
+        exit();
+    }else if(empty($password)){
+        header("Location: login.php?error=Password is required");
+        exit();
+    }else{
+        $sql = "SELECT * FROM user WHERE email='$emailid' AND pass='$password'";
+
+        $result = mysqli_query($conn, $sql);
+        
+        if(mysqli_num_rows($result) === 1){
+            $row = mysqli_fetch_assoc($result);
+            if($row['Email'] === $emailid && $row['Pass'] === $password){
+                header("Location: home_page.html");
+                exit();
+        }else{
+            header("Location: login.php?error=Incorrect Email or Password");
             exit();
-        } else {
-            echo "Incorrect password";
         }
-    } else {
-        echo "User not found";
+    }else{
+        header("Location: login.php?error=Incorrect Email or Password");
+        exit();}
     }
-
-    // Close the prepared statement and database connection
-    $stmt->close();
-    $conn->close();
-} else {
-    echo "Form data not submitted or incomplete!";
 }
-?>
