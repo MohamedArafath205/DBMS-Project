@@ -80,3 +80,16 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+.btn{
+  background-color: #28282B;
+  color: white;
+  width: 50%;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 12px;
+  margin: 3px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
