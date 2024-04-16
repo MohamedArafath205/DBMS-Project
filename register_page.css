@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    padding: 20px;
+    margin: 0;
 }
 
 h2 {
@@ -49,4 +49,8 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #45a049;
+}
+
+.opennheimmer{
+    margin: 10px 10px;
 }
