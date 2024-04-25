@@ -31,7 +31,7 @@ if (isset($_POST['emailid']) && isset($_POST['password'])){
         if(mysqli_num_rows($result) === 1){
             $row = mysqli_fetch_assoc($result);
             if($row['Email'] === $emailid && $row['Pass'] === $password){
-                header("Location: home_page.html");
+                header("Location: home_page.php");
                 exit();
         }else{
             header("Location: login.php?error=Incorrect Email or Password");

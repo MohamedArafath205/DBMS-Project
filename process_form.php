@@ -10,7 +10,7 @@
         $stmt = $conn->prepare("insert into user(name, email, pass) values(?, ?, ?)");
         $stmt->bind_param("sss", $name, $email, $password);
         $stmt->execute();
-        header("Location: home_page.html");
+        header("Location: home_page.php");
         $stmt->close();
         $conn->close();
         exit();
