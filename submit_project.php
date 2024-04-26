@@ -14,7 +14,7 @@
         $stmt = $conn->prepare("insert into projects(project_name, team_lead ,description, budget, funds_raised, status, category) values(?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("sssssss", $projectName, $teamLead, $description, $budget, $fundsRaised, $status, $category);
         $stmt->execute();
-        header("Location: home_page.html");
+        header("Location: home_page.php");
         $stmt->close();
         $conn->close();
         exit();
